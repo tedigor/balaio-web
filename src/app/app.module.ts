@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PublicModule } from './public/public.module';
 import { SharedComponentsModule } from './shared/shared-components/shared-components.module';
 
 
@@ -12,7 +13,8 @@ import { SharedComponentsModule } from './shared/shared-components/shared-compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    PublicModule
   ],
   providers: [],
   bootstrap: [AppComponent]
