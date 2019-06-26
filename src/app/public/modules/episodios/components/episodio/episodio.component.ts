@@ -1,7 +1,4 @@
-import { Component, OnInit, SecurityContext } from '@angular/core';
-import { Episodio } from '../../models/episodio.model';
-import { DomSanitizer } from '@angular/platform-browser';
-import { EpisodiosService } from '../../services/episodios.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-episodio',
@@ -10,27 +7,11 @@ import { EpisodiosService } from '../../services/episodios.service';
 })
 export class EpisodioComponent implements OnInit {
 
-  episodios: Array<Episodio> = [];
+ 
+  @Input() urlEpisodio: string = '';
 
-  constructor(
-    private episodiosService: EpisodiosService,
-    private sanitizer: DomSanitizer
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getEpisodios();
-
-  }
-
-  private getEpisodios() {
-    this.episodiosService.getEpisodios().subscribe(episodios => {
-      this.episodios = episodios;
-    });
-  }
-
-
-
-  protected validUrl() {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(this.episodios[0].urlEpisodio);
   }
 }

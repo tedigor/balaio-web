@@ -1,3 +1,5 @@
-<p>
-  episodio-list works!
-</p>
+<app-card-container *ngFor="let episodio of episodios">
+  <div>
+    <app-episodio [urlEpisodio]="validUrl(episodio.urlEpisodio)"></app-episodio>
+  </div>
+</app-card-container>

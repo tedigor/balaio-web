@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { EpisodioComponent } from './public/modules/episodios/components/episodio/episodio.component';
+import { RouterModule, Routes } from '@angular/router';
+import { EpisodioListComponent } from './public/modules/episodios/components/episodio-list/episodio-list.component';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: EpisodioComponent
+    component: EpisodioListComponent
   }
 ];
 
